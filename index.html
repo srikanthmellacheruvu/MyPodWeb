@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="MyPod">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#d6d9de">
+<title>MyPod</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="device" id="device">
+  <div class="bezel">
+    <div class="screen" id="screen">
+      <div class="bar">
+        <button class="back" id="back" aria-label="Back"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg><span>Back</span></button>
+        <span class="state" id="state"></span>
+        <span class="title" id="title"></span>
+        <span class="time" id="clock"></span>
+      </div>
+      <div class="content" id="content"></div>
+      <div class="letter" id="letter"></div>
+      <div class="toast" id="toast"></div>
+    </div>
+  </div>
+  <div class="cluster" id="cluster">
+    <div class="wheel" id="wheel"><button class="centre" id="centre" aria-label="Select"></button></div>
+    <button class="key tl" data-key="play" aria-label="Play"><svg viewBox="0 0 24 24"><path class="f" d="M7 4.5v15l12.5-7.5z"/></svg></button>
+    <button class="key tr" data-key="pause" aria-label="Pause"><svg viewBox="0 0 24 24"><path class="f" d="M6.5 4.5h4v15h-4zM13.5 4.5h4v15h-4z"/></svg></button>
+    <button class="key bl" data-key="prev" aria-label="Rewind to previous song"><svg viewBox="0 0 24 24"><path class="f" d="M12 6v12L3.5 12zM21 6v12l-8.5-6z"/></svg></button>
+    <button class="key br" data-key="next" aria-label="Forward to next song"><svg viewBox="0 0 24 24"><path class="f" d="M12 6v12l8.5-6zM3 6v12l8.5-6z"/></svg></button>
+  </div>
+</div>
+<input type="file" id="picker" accept="audio/*,.mp3,.m4a,.aac,.wav,.flac,.aif,.aiff" multiple hidden>
+<script src="app.js"></script>
+</body>
+</html>
